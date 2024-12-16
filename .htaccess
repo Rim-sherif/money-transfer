@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+DirectoryIndex disabled
+RewriteEngine On
+RewriteBase /
+RewriteRule ^$ http://127.0.0.1:3001/ [P,L]
+
+
+RewriteCond %{REQUEST_URI} ^/(.*\.(jpg|png|gif|svg|webp))$
+RewriteRule ^(.*\.(jpg|png|gif|svg|webp))$ http://127.0.0.1:3001/$1 [L,P]
+
+RewriteCond %{REQUEST_URI} ^/(.*\.(js))$
+RewriteRule ^(.*\.(js))$ http://127.0.0.1:3001/$1 [L,P,NE]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.*)$ http://127.0.0.1:3001/$1 [P,L]
+
+
+</IfModule>
+
+
