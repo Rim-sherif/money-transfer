@@ -47,13 +47,13 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="relative mt-32 h-80 lg:mt-24">
+            <div className="relative mt-32 h-80 lg:mt-24 sm:block hidden">
               <Image
                 alt="App screenshot"
-                src="/Screenshot 2024-12-15 200038.png"
+                src="/Low code development-pana.png"
                 width={1300}
                 height={2080}
-                className="absolute left-0 top-0 w-[60rem] max-w-none min-h-[620px] rounded-md bg-white/5 ring-1 ring-white/10"
+                className="absolute left-0 top-0 w-[60rem] max-w-none min-h-[520px] rounded-md bg-white/5 ring-1 ring-white/10"
               />
             </div>
           </div>

@@ -138,6 +138,8 @@ const App = () => {
 
   const SelectedComponent = views[selected] || (() => <div>Page Not Found</div>);
 
+  
+
 
   // const handleDropdownClick = (value: string) => {
   //   console.log("Selected dropdown item:", value); 
@@ -181,7 +183,7 @@ const App = () => {
             <img src="/mobile-money.png" alt="Logo" className="h-8 w-8" />
             <span className="text-xl font-bold text-white">Money Transfer</span>
             <button
-              className="h-8 w-6 p-1 bg-yellow-500 text-gray-900 rounded-lg hover:border-gray-300"
+              className="h-8 w-6 p-1 bg-yellow-500 text-gray-900 rounded-lg hover:border-gray-300 sm:block hidden"
               onClick={() => setIsEnlarge(!isEnlarge)}
             >
               {isEnlarge ? enlarge.decrease : enlarge.enlarge}
@@ -268,11 +270,11 @@ const App = () => {
 
 
       <header
-        className={`fixed top-16 left-0 flex flex-col justify-between bg-gray-900 shadow p-6 transition-all ${isEnlarge ? "w-64" : "w-16"
+        className={`fixed top-16 left-0 flex flex-col justify-between  bg-gray-900 shadow p-6 transition-all ${isEnlarge ? "w-64" : "w-16"
           } `}
         style={{ height: "calc(100vh - 4rem)" }}
       >
-        <nav className="flex flex-col space-y-4">
+        <nav className=" flex-col space-y-4 ">
       {nav.map((link, index) => (
         <div key={index} className="relative">
           <button
@@ -290,8 +292,7 @@ const App = () => {
          
         </div>
       ))}
-    </nav>
-        {isEnlarge ? (
+      {isEnlarge ? (
         <button className="flex items-center bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 ">
 
         <i className="fas fa-solid fa-download mr-6 "></i>
@@ -302,6 +303,8 @@ const App = () => {
         )
  
         }
+    </nav>
+        
         
       </header>
 
