@@ -51,9 +51,9 @@ export default function Home() {
               <Image
                 alt="App screenshot"
                 src="/Screenshot 2024-12-15 200038.png"
-                width={1200}
-                height={1080}
-                className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                width={1300}
+                height={2080}
+                className="absolute left-0 top-0 w-[60rem] max-w-none min-h-[620px] rounded-md bg-white/5 ring-1 ring-white/10"
               />
             </div>
           </div>
