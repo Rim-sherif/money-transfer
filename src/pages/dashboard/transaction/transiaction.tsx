@@ -56,69 +56,68 @@ export default function App() {
 
   return (
     <div className="p-6 bg-gray-800 min-h-screen text-gray-200 shadow-lg rounded-lg">
-      <div className="flex justify-between mb-4">
-        <h2 className="text-2xl font-bold">Transactions</h2>
-        <div className="flex space-x-2 relative">
-          {/* Filter Dropdown */}
-          <select
-            className="px-4 py-2 bg-gray-700 rounded"
-            value={filterState}
-            onChange={(e) => setFilterState(e.target.value)}
-          >
-            <option value="All">All</option>
-            <option value="Pending">Pending</option>
-            <option value="Completed">Completed</option>
-          </select>
+  <div className="flex flex-col sm:flex-row sm:justify-between mb-4">
+    <h2 className="text-2xl font-bold mb-4 sm:mb-0">Transactions</h2>
+    <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 w-full sm:w-auto">
+      {/* Filter Dropdown */}
+      <select
+        className="px-4 py-2 bg-gray-700 rounded w-full sm:w-auto"
+        value={filterState}
+        onChange={(e) => setFilterState(e.target.value)}
+      >
+        <option value="All">All</option>
+        <option value="Pending">Pending</option>
+        <option value="Completed">Completed</option>
+      </select>
 
-          {/* Export Dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setShowDropdown(!showDropdown)}
-              className="px-4 py-2 bg-gray-700 hover:bg-blue-600 rounded"
+      {/* Export Dropdown */}
+      <div className=" w-full sm:w-auto">
+        <button
+          onClick={() => setShowDropdown(!showDropdown)}
+          className="px-4 py-2 bg-gray-700 hover:bg-blue-600 rounded w-full sm:w-auto"
+        >
+          Export Report
+        </button>
+        {showDropdown && (
+          <ul className="absolute right-0 mt-2 w-44 text-sm p-2 bg-gray-700 rounded shadow-lg">
+            <li
+              onClick={exportAsExcel}
+              className="px-4 py-2 hover:bg-gray-600 hover:rounded-md hover:text-blue-500 cursor-pointer"
             >
-              Export Report
-            </button>
-            {showDropdown && (
-              <ul className="absolute right-0 mt-2 w-44 text-sm p-2 bg-gray-700 rounded shadow-lg">
-                <li
-                  onClick={exportAsExcel}
-                  className="px-4 py-2 hover:bg-gray-600 hover:rounded-md hover:text-blue-500 cursor-pointer"
-                >
-                  Download as Excel
-                </li>
-                <li
-                  onClick={exportAsCSV}
-                  className="px-4 py-2 hover:bg-gray-600 hover:rounded-md hover:text-blue-500 cursor-pointer"
-                >
-                  Download as CSV
-                </li>
-                <li
-                  onClick={exportAsPDF}
-                  className="px-4 py-2 hover:bg-gray-600 hover:rounded-md hover:text-blue-500 cursor-pointer"
-                >
-                  Download as PDF
-                </li>
-              </ul>
-            )}
-          </div>
-
-          {/* Add Transaction Button */}
-          <button
-            onClick={() => setShowModal(true)}
-            className="px-4 py-2 bg-blue-700 hover:bg-blue-800 rounded"
-          >
-            Add Transaction
-          </button>
-        </div>
+              Download as Excel
+            </li>
+            <li
+              onClick={exportAsCSV}
+              className="px-4 py-2 hover:bg-gray-600 hover:rounded-md hover:text-blue-500 cursor-pointer"
+            >
+              Download as CSV
+            </li>
+            <li
+              onClick={exportAsPDF}
+              className="px-4 py-2 hover:bg-gray-600 hover:rounded-md hover:text-blue-500 cursor-pointer"
+            >
+              Download as PDF
+            </li>
+          </ul>
+        )}
       </div>
 
-   
-      <TransactionsTable transactions={filteredTransactions} />
-
-   
-      {showModal && (
-        <AddTransactionModal onClose={() => setShowModal(false)} onSave={handleAddTransaction} />
-      )}
+      {/* Add Transaction Button */}
+      <button
+        onClick={() => setShowModal(true)}
+        className="px-4 py-2 bg-blue-700 hover:bg-blue-800 rounded w-full sm:w-auto"
+      >
+        Add Transaction
+      </button>
     </div>
+  </div>
+
+  <TransactionsTable transactions={filteredTransactions} />
+
+  {showModal && (
+    <AddTransactionModal onClose={() => setShowModal(false)} onSave={handleAddTransaction} />
+  )}
+</div>
+
   );
 }
