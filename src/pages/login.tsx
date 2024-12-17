@@ -17,7 +17,7 @@ function AuthForm() {
               className="relative flex items-center isolate rounded-b-lg lg:w-6/12 lg:rounded-e-lg lg:rounded-bl-none min-h-full bg-gray-900"
 
             >
-              <svg
+              {/* <svg
                 viewBox="0 0 1024 1024"
                 aria-hidden="true"
                 className="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -35,7 +35,7 @@ function AuthForm() {
                     <stop offset={1} stopColor="#E935C1" />
                   </radialGradient>
                 </defs>
-              </svg>
+              </svg> */}
               <div className="px-4 py-6 text-white text-center md:mx-6 md:p-12">
                 <h2 className="mb-6 text-3xl font-semibold">Fast, Efficient & Safe</h2>
                 <p className="text-sm">
