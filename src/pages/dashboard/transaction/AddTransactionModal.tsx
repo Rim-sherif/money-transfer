@@ -1,17 +1,29 @@
-import React, { useState } from "react";
 
-export default function AddTransactionModal({ onClose, onSave }) {
-  const [formData, setFormData] = useState({
-    id: "",
+import React, { useState, ChangeEvent } from "react";
+import { Transactions } from "./transiaction";
+
+interface AddTransactionModalProps {
+  onClose: () => void;
+  onSave: (transaction: Transactions) => void;
+}
+
+export default function AddTransactionModal({ onClose, onSave }: AddTransactionModalProps) {
+  const [formData, setFormData] = useState<Transactions>({
+    id: 0,
     store: "",
     from: "",
     provider: "VF-Cash",
-    amount: "",
+    amount: 0,
     state: "Pending",
+    transaction: "-",
+    simNumber: "-",
+    userName: "-",
+    date: new Date().toISOString(),
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev: Transactions) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = () => {
@@ -68,3 +80,6 @@ export default function AddTransactionModal({ onClose, onSave }) {
     </div>
   );
 }
+
+
+

@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 import Dashboard from "./dashboard";
 import { Menu } from '@headlessui/react'
 import React, { useState } from "react";
@@ -180,7 +180,7 @@ const App = () => {
         <div className="flex justify-between items-center px-6 py-4">
 
           <div className="flex items-center space-x-4">
-            <img src="/mobile-money.png" alt="Logo" className="h-8 w-8" />
+            <Image src="/mobile-money.png" alt="Logo" className="h-8 w-8" width={100} height={200} />
             <span className="text-xl font-bold text-white">Money Transfer</span>
             <button
               className="h-8 w-6 p-1 bg-yellow-500 text-gray-900 rounded-lg hover:border-gray-300 sm:block hidden"
@@ -207,7 +207,9 @@ const App = () => {
             <Menu as="div" >
               <div>
                 <Menu.Button className="h-10 w-10   ">
-                  <img
+                  <Image
+                  width={200}
+                  height={200}
                     src="/150-17.jpg"
                     alt="User"
                     className="rounded-lg"

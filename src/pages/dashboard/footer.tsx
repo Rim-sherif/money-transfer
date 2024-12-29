@@ -4,7 +4,7 @@ export default function Foot(){
     return(
         <div className="footer py-4 flex flex-col lg:flex-col">
         <div className="container-xxl flex flex-col md:flex-row justify-between items-center">
-          {/* Left Section */}
+
           <div className="text-dark order-2 md:order-1">
             <span className="text-gray-400 font-bold mr-1">Created by</span>
             <a
@@ -17,7 +17,7 @@ export default function Foot(){
             </a>
           </div>
       
-          {/* Right Section */}
+        
           <ul className="menu flex space-x-2 text-gray-600 hover:text-primary font-bold order-1 md:order-2">
             <li>
               <a

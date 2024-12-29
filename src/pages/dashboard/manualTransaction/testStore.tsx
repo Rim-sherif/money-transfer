@@ -17,7 +17,7 @@ export default function TestStore() {
                         className="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md p-2 outline-none"
                         required
                     />
-                    <p className="text-sm text-red-700 mt-1">Sender's number is required</p>
+                    <p className="text-sm text-red-700 mt-1">Senders number is required</p>
                 </div>
                 <div>
                     <label htmlFor="amount" className="block text-sm font-medium">Amount</label>

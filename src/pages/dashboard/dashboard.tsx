@@ -4,7 +4,7 @@ export default function Dashboard(){
     return(
         <div className="min-h-screen bg-gray-900 text-white p-2 md:p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Left Section */}
+
         <div className="p-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg shadow-lg">
           <h1 className="text-3xl font-bold mb-2">
             Welcome <span className="text-gray-900">Kareem Elbhrawy</span>

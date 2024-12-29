@@ -1,7 +1,19 @@
 import { useState } from "react";
 
+interface Store {
+  id: number;
+  storeName: string;
+  url: string;
+  currencyRate: string;
+  mobileWallet: string;
+  type: string;
+  state: string;
+  expiresAt: string;
+  remainingDays: number;
+}
+
 export default function StoresTable() {
-  const [stores] = useState([
+  const [stores] = useState<Store[]>([
     {
       id: 15,
       storeName: "Test store",
@@ -17,12 +29,9 @@ export default function StoresTable() {
 
   const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
 
-
   const toggleDropdown = (id: number) => {
     setDropdownOpen((prev) => (prev === id ? null : id));
-
   };
-  
 
   return (
     <div className="bg-gray-800 text-white p-6 rounded-lg shadow-md">
@@ -36,7 +45,7 @@ export default function StoresTable() {
       <div className="overflow-x-auto min-h-screen">
         <table className="table-auto w-full text-left">
           <thead>
-            <tr className="bg-gray-800 ">
+            <tr className="bg-gray-800">
               <th className="p-2">ID</th>
               <th className="p-2">STORE</th>
               <th className="p-2">CURRENCY RATE</th>
@@ -70,7 +79,7 @@ export default function StoresTable() {
                   </div>
                 </td>
                 <td className="p-2">
-                <button
+                  <button
                     onClick={() => toggleDropdown(store.id)}
                     className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded-md"
                   >
