@@ -10,6 +10,8 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 
 const API_URL = process.env.NEXT_MAIN_API_VERSION;
 
+console.log(process.env, process.env.NEXT_MAIN_API_VERSION);
+
 type FormData = {
   email: string;
   password: string;
