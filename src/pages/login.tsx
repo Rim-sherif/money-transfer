@@ -8,7 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 
-const API_URL = process.env.NXET_MAIN_API_VERSION;
+const API_URL = process.env.NEXT_MAIN_API_VERSION;
 
 type FormData = {
   email: string;
