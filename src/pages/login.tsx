@@ -8,7 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 
-const API_URL = "https://ta7wela-api.in-general.net";
+const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 type FormData = {
   email: string;
