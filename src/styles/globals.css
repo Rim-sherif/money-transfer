@@ -135,11 +135,11 @@ body {
 }
 
 .bg-imgg{
-  background-image: url("../../public/Desktop - 3.jpg");
+  background-image: url("/Desktop - 3.jpg");
   background-size: cover;
 }
 .bg-img2{
-  background-image: url("../../public/Frame 1984078134.png");
+  background-image: url("/Frame 1984078134.png");
   background-size: cover;
 }
 @layer base {
