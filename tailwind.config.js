@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+<<<<<<< HEAD
     darkMode: ["class"],
     content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -75,4 +76,31 @@ module.exports = {
   	}
   },
   plugins: [require("tailwindcss-animate")],
+=======
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: "rgb(var(--primary-color))",
+        secondary: "rgb(var(--secondary-color))",
+        third: "rgb(var(--third-color))",
+        dark: "rgb(var(--dark-color))",
+        title: "rgb(var(--title-color))",
+        content: "rgb(var(--content-color))",
+        card: "rgb(var(--card-color))",
+        fields: "rgb(var(--fields-color))",
+        customTeal: '#14AF8A',
+      },
+   
+    },
+  },
+  plugins: [],
+>>>>>>> 290ede3709e415cc2dfdd9e63c24115e614456d6
 };
